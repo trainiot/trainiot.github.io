@@ -1,1 +1,32 @@
-Initial commit
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trainiot</title>
+</head>
+<body>
+
+    <h1>Trainiot</h1>
+    <p>
+        Control a small model train layout using Windows IOT running on a Raspberry Pi. This is not intended to replace any of the existing model train control packages with fancy nifty features, it is just to experiment with creating it all from scratch.
+        If you find something that can help you feel free to borrow, steal, or even contribute... once there is something it is possible to contribute to of course.
+    </p>
+    <h2>Hardware</h2>
+    <p>
+        As the Raspberry Pi is not a real time device it is not able to generate the <a href="https://en.wikipedia.org/wiki/Digital_Command_Control">DCC</a> signal directly using the IO ports. The sensible thing to do is to use a <a href="http://www.sprog-dcc.co.uk/">SPROG</a>,
+        <a href="http://www.uhlenbrock.de/de_DE/produkte/digizen/I000C67F-001.htm!ArcEntryInfo=0004.2.I000C67F">IB-COM</a> or one of the other countless command stations with a serial or USB interface.
+        Or maybe connect an <a href="https://www.arduino.cc/">Arduino</a> with USB
+        and run <a href="https://github.com/DccPlusPlus/BaseStation">DCC++</a> on it if you do not always want to go for the simplest option.
+    </p>
+    <p>
+        The less sensible thing is to create your own hardware. It's not that hard to do if you are crazy enough -
+        basically any microcontroller will do the job with a minimum of coding and hardware. But what do you do if even this this is not crazy enough?
+        You use standard off the shelf logic ICs to read the DCC signal through the <a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI protocol</a> and generate the corresponding DCC signal. 
+    </p>
+    <p>
+        <a href="https://github.com/trainiot/Hardware">Trainiot SPI 2 DCC</a>
+    </p>
+    <p>
+        Notice this is work in progress - so far the device has been assembled on a breadboard only and - as the booster has not been constructed yet - it is not known if this will work in practice.
+        </p>
+</body>
+</html>
